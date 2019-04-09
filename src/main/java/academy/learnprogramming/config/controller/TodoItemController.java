@@ -10,17 +10,16 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 @Controller
 public class TodoItemController {
 
-    // == mode atributes ==
-
+    // == model attributes ==
     @ModelAttribute
-    public TodoData todoData(){
+    public TodoData todoData() {
         return new TodoData();
     }
 
-   // == handler methods ==
-    //http://localhost:8080/todo-list/items
+    // == handler methods ==
+    // http://localhost:8080/todo-list/items
     @GetMapping(Mappings.ITEMS)
-    public String items(){
+    public String items() {
         return ViewNames.ITEMS_LIST;
     }
 }
