@@ -12,6 +12,7 @@
         <tr>
             <th>Title</th>
             <th>Deadline</th>
+            <th>Details</th>
         </tr>
 
         <c:forEach var="item" items="${todoData.items}">
@@ -19,6 +20,7 @@
             <tr>
                 <td><c:out value="${item.title}"/></td>
                 <td><c:out value="${item.deadline}"/></td>
+                <td><c:out value="${item.details}"/></td>
             <tr/>
         </c:forEach>
     </table>
