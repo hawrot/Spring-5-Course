@@ -3,6 +3,7 @@ package academy.learnprogramming.config.model;
 import lombok.Data;
 import lombok.NonNull;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,6 +22,11 @@ public class TodoData {
 
 
     public TodoData() {
+        // add some dummy data, using the addItem method so it sets the id fields
+        addItem(new TodoItem("first", "first details", LocalDate.now()));
+        addItem(new TodoItem("second", "second details", LocalDate.now()));
+        addItem(new TodoItem("third", "third details", LocalDate.now()));
+
     }
 
     // == public methods ==
