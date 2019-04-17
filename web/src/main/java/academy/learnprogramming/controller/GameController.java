@@ -2,12 +2,15 @@ package academy.learnprogramming.controller;
 
 import academy.learnprogramming.service.GameService;
 import academy.learnprogramming.util.AttributeNames;
+import academy.learnprogramming.util.GameMappings;
 import academy.learnprogramming.util.ViewNames;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.engine.AttributeName;
 
 
@@ -36,5 +39,13 @@ public class GameController {
             return ViewNames.GAME_OVER;
         }
         return ViewNames.PLAY;
+    }
+
+    @PostMapping(GameMappings.PLAY)
+    public String processMessage(@RequestParam int guess){
+        log.info("guess={}", guess);
+        gameService.checkGuess(guess);
+        return GameMappings.REDIRECT_PLAY;
+
     }
 }
