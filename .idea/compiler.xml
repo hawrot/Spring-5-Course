@@ -12,4 +12,9 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="web" options="--add-modules=java.xml.ws.annotation" />
+    </option>
+  </component>
 </project>
