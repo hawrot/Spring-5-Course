@@ -1,6 +1,6 @@
 package academy.learnprogramming.util;
 
-public final class AtrributeNames {
+public final class AttributeNames {
 
     // -- constants ==
    public static final String MAIN_MESSAGE =  "mainMessage";
@@ -9,6 +9,6 @@ public final class AtrributeNames {
     // constructor --
 
 
-    public AtrributeNames() {
+    public AttributeNames() {
     }
 }
